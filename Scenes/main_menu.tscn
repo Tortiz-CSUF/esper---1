@@ -30,59 +30,55 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="LeftMarginContainer" type="MarginContainer" parent="MenuContainer" unique_id=669204458]
+[node name="LeftPanel" type="VBoxContainer" parent="MenuContainer" unique_id=2142908773]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 10
 size_flags_vertical = 4
 
-[node name="LeftPanel" type="VBoxContainer" parent="MenuContainer/LeftMarginContainer" unique_id=2142908773]
-layout_mode = 2
-size_flags_horizontal = 6
-
-[node name="TitleLabel" type="Label" parent="MenuContainer/LeftMarginContainer/LeftPanel" unique_id=391213069]
+[node name="TitleLabel" type="Label" parent="MenuContainer/LeftPanel" unique_id=391213069]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_ce3w2")
-theme_override_font_sizes/font_size = 50
+theme_override_font_sizes/font_size = 60
 text = "~ Esper ~"
 horizontal_alignment = 1
 
-[node name="Spacer1" type="Control" parent="MenuContainer/LeftMarginContainer/LeftPanel" unique_id=798046588]
+[node name="Spacer1" type="Control" parent="MenuContainer/LeftPanel" unique_id=798046588]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
-[node name="BeginButton" type="Button" parent="MenuContainer/LeftMarginContainer/LeftPanel" unique_id=997914450]
+[node name="BeginButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=997914450]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_hover_color = Color(1, 0.84313726, 0, 1)
 theme_override_fonts/font = ExtResource("1_ce3w2")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 48
 text = "Begin"
 flat = true
 
-[node name="Spacer2" type="Control" parent="MenuContainer/LeftMarginContainer/LeftPanel" unique_id=367119980]
+[node name="Spacer2" type="Control" parent="MenuContainer/LeftPanel" unique_id=367119980]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
-[node name="SettingsButton" type="Button" parent="MenuContainer/LeftMarginContainer/LeftPanel" unique_id=1784932307]
+[node name="SettingsButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=1784932307]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_hover_color = Color(1, 0.84313726, 0, 1)
 theme_override_fonts/font = ExtResource("1_ce3w2")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 48
 text = "Settings"
 flat = true
 
-[node name="Spacer3" type="Control" parent="MenuContainer/LeftMarginContainer/LeftPanel" unique_id=736172725]
+[node name="Spacer3" type="Control" parent="MenuContainer/LeftPanel" unique_id=736172725]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
-[node name="QuitButton" type="Button" parent="MenuContainer/LeftMarginContainer/LeftPanel" unique_id=1842792465]
+[node name="QuitButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=1842792465]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_hover_color = Color(1, 0.84313726, 0, 1)
 theme_override_fonts/font = ExtResource("1_ce3w2")
-theme_override_font_sizes/font_size = 42
+theme_override_font_sizes/font_size = 48
 text = "Quit"
 flat = true
 
@@ -92,7 +88,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Illustration" type="TextureRect" parent="MenuContainer/RightPanel" unique_id=300789961]
-custom_minimum_size = Vector2(400, 400)
+custom_minimum_size = Vector2(600, 400)
 layout_mode = 2
 texture = ExtResource("2_n45e2")
 stretch_mode = 5
