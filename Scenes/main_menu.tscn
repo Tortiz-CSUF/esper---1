@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cfhka1qyrqfnh"]
 
 [ext_resource type="FontFile" uid="uid://g0knl88lrlk3" path="res://Assets/themes/ornate_pixelart_theme/pixelplay.ttf" id="1_ce3w2"]
+[ext_resource type="Script" uid="uid://dffpxg1q3ov2l" path="res://Scripts/main_menu.gd" id="1_n45e2"]
 [ext_resource type="Texture2D" uid="uid://dq78s01g7d56y" path="res://Assets/main_illustration/esper_illustration2.png" id="2_n45e2"]
 [ext_resource type="AudioStream" uid="uid://npaw60uvdt1b" path="res://Assets/music/Esper_MENU.mp3" id="3_opfnp"]
 [ext_resource type="AudioStream" uid="uid://b24ylfoiod0mn" path="res://Assets/sfx/menu_click.wav" id="4_cp0ys"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_n45e2")
 
 [node name="Background" type="ColorRect" parent="." unique_id=1243073765]
 layout_mode = 1
