@@ -2,6 +2,64 @@
 
 [node name="MainMenu" type="Control" unique_id=1479134135]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=1243073765]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00011382803, 0.00011382803, 0.00011382803, 1)
+
+[node name="MenuContainer" type="HBoxContainer" parent="." unique_id=2127750572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="VBoxContainer" parent="MenuContainer" unique_id=2142908773]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="TitleLabel" type="Label" parent="MenuContainer/LeftPanel" unique_id=391213069]
+layout_mode = 2
+text = "Esper"
+
+[node name="Spacer1" type="Control" parent="MenuContainer/LeftPanel" unique_id=798046588]
+layout_mode = 2
+
+[node name="BeginButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=997914450]
+layout_mode = 2
+
+[node name="Spacer2" type="Control" parent="MenuContainer/LeftPanel" unique_id=367119980]
+layout_mode = 2
+
+[node name="SettingsButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=1784932307]
+layout_mode = 2
+
+[node name="Spacer3" type="Control" parent="MenuContainer/LeftPanel" unique_id=736172725]
+layout_mode = 2
+
+[node name="QuitButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=1842792465]
+layout_mode = 2
+
+[node name="RightPanel" type="CenterContainer" parent="MenuContainer" unique_id=847160035]
+layout_mode = 2
+
+[node name="Illustration" type="TextureRect" parent="MenuContainer/RightPanel" unique_id=300789961]
+layout_mode = 2
+
+[node name="SelectionIndicator" type="ColorRect" parent="MenuContainer" unique_id=1411174201]
+layout_mode = 2
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="MenuContainer" unique_id=1804425531]
+
+[node name="ClickSFX" type="AudioStreamPlayer" parent="MenuContainer" unique_id=1437356684]
