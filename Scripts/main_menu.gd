@@ -11,7 +11,15 @@ var menu_buttons: Array[Button] = []
 
 
 func _ready() -> void:
-	pass # Replace with function body.
+	menu_buttons = [begin_button, settings_button, quit_button]
+	
+	for btn in menu_buttons:
+		btn.mouse_entered.connect(_on_button_hovered.bind(btn))
+		btn.mouse_exited.connect(_on_button_unhovered)
+		
+	begin_button.pressed.connect(_on_begin_pressed)
+	settings_button.pressed.connect(_on_settings_pressed)
+	quit_button.pressed.connect(_on_quit_pressed)
 
 
 func _on_button_hovered(btn: Button) -> void:
