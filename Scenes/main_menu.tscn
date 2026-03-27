@@ -95,15 +95,20 @@ layout_mode = 2
 texture = ExtResource("2_n45e2")
 stretch_mode = 5
 
-[node name="SelectionIndicator" type="ColorRect" parent="MenuContainer" unique_id=1411174201]
+[node name="SelectionIndicator" type="ColorRect" parent="." unique_id=1411174201]
+visible = false
 custom_minimum_size = Vector2(200, 4)
-layout_mode = 2
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 4.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="MenuMusic" type="AudioStreamPlayer" parent="MenuContainer" unique_id=1804425531]
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1804425531]
 stream = ExtResource("3_opfnp")
 autoplay = true
 bus = &"Music"
 
-[node name="ClickSFX" type="AudioStreamPlayer" parent="MenuContainer" unique_id=1437356684]
+[node name="ClickSFX" type="AudioStreamPlayer" parent="." unique_id=1437356684]
 stream = ExtResource("4_cp0ys")
 bus = &"SFX"

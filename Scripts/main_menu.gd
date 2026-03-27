@@ -3,8 +3,8 @@ extends Control
 @onready var begin_button: Button  = $MenuContainer/LeftPanel/BeginButton
 @onready var settings_button: Button = $MenuContainer/LeftPanel/SettingsButton
 @onready var quit_button: Button = $MenuContainer/LeftPanel/QuitButton
-@onready var selection_indicator: ColorRect = $MenuContainer/SelectionIndicator
-@onready var click_sfx: AudioStreamPlayer = $MenuContainer/ClickSFX
+@onready var selection_indicator: ColorRect = $SelectionIndicator
+@onready var click_sfx: AudioStreamPlayer = $ClickSFX
 
 var menu_buttons: Array[Button] = []
 
