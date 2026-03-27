@@ -7,3 +7,6 @@ var map_room_counts: Dictionary = {
 	"medium": 5,
 	"large": 6
 }
+
+func get_room_count() -> int:
+	return map_room_counts[selected_map]
