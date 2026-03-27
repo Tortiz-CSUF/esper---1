@@ -75,12 +75,12 @@ func _show_panel(panel_name: String) -> void:
 ## Main Menu
 func _on_begin_pressed() -> void:
 	click_sfx.play()
-	## map select placeholder
+	_show_panel("map_select")
 	
 
 func _on_settings_pressed() -> void:
 	click_sfx.play()
-	## settings placholder
+	_show_panel("settings")
 	
 	
 func _on_quit_pressed() -> void:
