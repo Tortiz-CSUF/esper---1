@@ -57,7 +57,19 @@ func _on_button_unhovered() -> void:
 	
 
 func _show_panel(panel_name: String) -> void:
-
+	menu_container.visible = false
+	map_select_panel.visible = false
+	settings_panel.visible = false
+	settings_panel.visible = false
+	selection_indicator.visible = false
+	
+	match panel_name:
+		"main":
+			menu_container.visible = true
+		"map_select":
+			map_select_panel.visible = true
+		"settings":
+			settings_panel.visible = true
 	
 	
 ## Main Menu
