@@ -39,6 +39,8 @@ func _ready() -> void:
 	begin_button.pressed.connect(_on_begin_pressed)
 	settings_button.pressed.connect(_on_settings_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
+	settings_back_button.pressed.connect(_on_settings_back_pressed)
+
 
 
 func _on_button_hovered(btn: Button) -> void:
