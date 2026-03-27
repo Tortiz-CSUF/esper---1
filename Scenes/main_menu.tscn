@@ -6,6 +6,9 @@
 [ext_resource type="AudioStream" uid="uid://npaw60uvdt1b" path="res://Assets/music/Esper_MENU.mp3" id="3_opfnp"]
 [ext_resource type="AudioStream" uid="uid://b24ylfoiod0mn" path="res://Assets/sfx/menu_click.wav" id="4_cp0ys"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(0.50377727, 0.99999994, 0.9784524, 1)
+
 [node name="MainMenu" type="Control" unique_id=1479134135]
 layout_mode = 3
 anchors_preset = 15
@@ -25,6 +28,7 @@ grow_vertical = 2
 color = Color(0.00011382803, 0.00011382803, 0.00011382803, 1)
 
 [node name="MenuContainer" type="HBoxContainer" parent="." unique_id=2127750572]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -103,6 +107,132 @@ offset_right = 200.0
 offset_bottom = 4.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
+
+[node name="MapSelectPanel" type="VBoxContainer" parent="." unique_id=1836051829]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MapTitle" type="Label" parent="MapSelectPanel" unique_id=126677731]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 40
+text = "Select Map"
+horizontal_alignment = 1
+
+[node name="MapSpacer1" type="Control" parent="MapSelectPanel" unique_id=628935242]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SmallButton" type="Button" parent="MapSelectPanel" unique_id=1879896692]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Small"
+flat = true
+
+[node name="MapSpacer2" type="Control" parent="MapSelectPanel" unique_id=1634600399]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="MediumButton" type="Button" parent="MapSelectPanel" unique_id=1430006699]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Medium"
+
+[node name="MapSpacer3" type="Control" parent="MapSelectPanel" unique_id=534597846]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="LargeButton" type="Button" parent="MapSelectPanel" unique_id=1881862121]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Large"
+
+[node name="MapSpacer4" type="Control" parent="MapSelectPanel" unique_id=1032501581]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="MapBackButton" type="Button" parent="MapSelectPanel" unique_id=2005017122]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+
+[node name="SettingsPanel" type="VBoxContainer" parent="." unique_id=907199110]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="SettingsTitle" type="Label" parent="SettingsPanel" unique_id=592177106]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 40
+text = "Settings
+"
+horizontal_alignment = 1
+
+[node name="SettingsSpacer1" type="Control" parent="SettingsPanel" unique_id=1958626071]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="SettingsPanel" unique_id=1367726048]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel" unique_id=552429461]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_n45e2")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SettingsSpacer2" type="Control" parent="SettingsPanel" unique_id=2142481372]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="SettingsPanel" unique_id=1679651065]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="SettingsPanel" unique_id=1793483052]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/slider = SubResource("StyleBoxFlat_n45e2")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SettingsSpacer3" type="Control" parent="SettingsPanel" unique_id=1168302832]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SettingsBackButton" type="Button" parent="SettingsPanel" unique_id=75383758]
+layout_mode = 2
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1804425531]
 stream = ExtResource("3_opfnp")
