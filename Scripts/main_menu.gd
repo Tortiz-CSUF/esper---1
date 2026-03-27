@@ -1,6 +1,7 @@
 extends Control
 
 # MAin Menu Hooks
+@onready var menu_container: HBoxContainer = $MenuContainer
 @onready var begin_button: Button  = $MenuContainer/LeftPanel/BeginButton
 @onready var settings_button: Button = $MenuContainer/LeftPanel/SettingsButton
 @onready var quit_button: Button = $MenuContainer/LeftPanel/QuitButton
@@ -56,7 +57,7 @@ func _on_button_unhovered() -> void:
 	
 
 func _show_panel(panel_name: String) -> void:
-	pass
+
 	
 	
 ## Main Menu
@@ -108,7 +109,9 @@ func _on_sfx_volume_changed(value: float) -> void:
 			AudioServer.set_bus_mute(sfx_bus_index, true)	
 	
 	
-	
+func _on_settings_back_pressed() -> void:
+	click_sfx.play()
+	_show_panel("main")
 	
 	
 	
