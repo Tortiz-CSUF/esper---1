@@ -52,7 +52,7 @@ layout_mode = 2
 [node name="BeginButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=997914450]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_hover_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.50377727, 0.99999994, 0.9784524, 1)
 theme_override_fonts/font = ExtResource("1_ce3w2")
 theme_override_font_sizes/font_size = 48
 text = "Begin"
@@ -65,7 +65,7 @@ layout_mode = 2
 [node name="SettingsButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=1784932307]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_hover_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.50377727, 0.99999994, 0.9784524, 1)
 theme_override_fonts/font = ExtResource("1_ce3w2")
 theme_override_font_sizes/font_size = 48
 text = "Settings"
@@ -78,7 +78,7 @@ layout_mode = 2
 [node name="QuitButton" type="Button" parent="MenuContainer/LeftPanel" unique_id=1842792465]
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_hover_color = Color(1, 0.84313726, 0, 1)
+theme_override_colors/font_hover_color = Color(0.50377727, 0.99999994, 0.9784524, 1)
 theme_override_fonts/font = ExtResource("1_ce3w2")
 theme_override_font_sizes/font_size = 48
 text = "Quit"
