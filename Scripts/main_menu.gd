@@ -25,7 +25,11 @@ var menu_buttons: Array[Button] = []
 
 
 func _ready() -> void:
-	menu_buttons = [begin_button, settings_button, quit_button]
+	menu_buttons = [
+		begin_button, settings_button, quit_button,
+		small_button, medium_button, large_button, map_back_button,
+		settings_back_button			
+	]
 	
 	for btn in menu_buttons:
 		btn.mouse_entered.connect(_on_button_hovered.bind(btn))
@@ -49,8 +53,9 @@ func _on_button_hovered(btn: Button) -> void:
 
 func _on_button_unhovered() -> void:
 	selection_indicator.visible = false	
-
-
+	
+	
+## Main Menu
 func _on_begin_pressed() -> void:
 	click_sfx.play()
 	## map select placeholder
@@ -65,4 +70,14 @@ func _on_quit_pressed() -> void:
 	click_sfx.play()
 	await  get_tree().create_timer(0.15).timeout
 	get_tree().quit()
+	
+
+## Map Selection 
+func _on_map_selected(map_size: String) -> void:
+	click_sfx.play()
+	GameManager.selected_map = map_size
+	get_tree().change_scene_to_file("[PLACEHOLDER]")	
+	
+	
+	
 	
