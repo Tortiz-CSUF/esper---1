@@ -96,7 +96,6 @@ texture = ExtResource("2_n45e2")
 stretch_mode = 5
 
 [node name="SelectionIndicator" type="ColorRect" parent="MenuContainer" unique_id=1411174201]
-visible = false
 custom_minimum_size = Vector2(200, 4)
 layout_mode = 2
 
