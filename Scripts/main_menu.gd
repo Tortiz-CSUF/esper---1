@@ -54,6 +54,10 @@ func _on_button_hovered(btn: Button) -> void:
 func _on_button_unhovered() -> void:
 	selection_indicator.visible = false	
 	
+
+func _show_panel(panel_name: String) -> void:
+	pass
+	
 	
 ## Main Menu
 func _on_begin_pressed() -> void:
@@ -77,6 +81,38 @@ func _on_map_selected(map_size: String) -> void:
 	click_sfx.play()
 	GameManager.selected_map = map_size
 	get_tree().change_scene_to_file("[PLACEHOLDER]")	
+	
+	
+func _on_map_back_pressed() -> void:
+	click_sfx.play()
+	_show_panel("main")
+	
+
+## Settings
+func _on_music_volume_changed(value: float) -> void:
+	var music_bus_index: int = AudioServer.get_bus_index("Music")
+	if value > 0.0:
+		AudioServer.set_bus_volume_db(music_bus_index, linear_to_db(value))
+		AudioServer.set_bus_mute(music_bus_index, false)
+	else:
+		AudioServer.set_bus_mute(music_bus_index, true)	
+	
+
+
+func _on_sfx_volume_changed(value: float) -> void:
+		var sfx_bus_index: int = AudioServer.get_bus_index("SFX")
+		if value > 0.0:
+			AudioServer.set_bus_volume_db(sfx_bus_index, linear_to_db(value))
+			AudioServer.set_bus_mute(sfx_bus_index, false)
+		else:
+			AudioServer.set_bus_mute(sfx_bus_index, true)	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
