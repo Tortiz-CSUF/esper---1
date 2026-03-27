@@ -233,6 +233,12 @@ layout_mode = 2
 
 [node name="SettingsBackButton" type="Button" parent="SettingsPanel" unique_id=75383758]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.50377727, 0.99999994, 0.9784524, 1)
+theme_override_fonts/font = ExtResource("1_ce3w2")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+flat = true
 
 [node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1804425531]
 stream = ExtResource("3_opfnp")
