@@ -1,3 +1,23 @@
 [gd_scene format=3 uid="uid://03gw2ucvcbut"]
 
+[ext_resource type="Script" uid="uid://dsae00yemcw87" path="res://Scripts/bullet.gd" id="1_oduel"]
+[ext_resource type="Texture2D" uid="uid://cowb1g6dfhfxv" path="res://Assets/effects/projectile.png" id="2_ycag2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6afsh"]
+radius = 5.0
+
 [node name="Bullet" type="Area2D" unique_id=335354334]
+script = ExtResource("1_oduel")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2111208900]
+texture_filter = 1
+scale = Vector2(3, 3)
+texture = ExtResource("2_ycag2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1125960733]
+shape = SubResource("CircleShape2D_6afsh")
+
+[node name="LifeTimer" type="Timer" parent="." unique_id=602466689]
+wait_time = 2.0
+one_shot = true
+autostart = true

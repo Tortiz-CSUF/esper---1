@@ -20,8 +20,8 @@ var bullet_scene: PackedScene =  null
 var last_direction: Vector2 = Vector2.DOWN
 
 func _ready() -> void:
-	if ResourceLoader.exists("res://Scenes/bullet.tscn"):		## MAKE SURE SCENE PATH MATCHES 
-		bullet_scene = load("res://Scenes/bullet.tscn")
+	if ResourceLoader.exists("res://Scenes/bullet.tscn"):		
+		bullet_scene = load("res://Scenes/bullet.tscn") 
 	animated_sprite.play("idle")
 	
 
