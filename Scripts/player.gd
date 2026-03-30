@@ -46,7 +46,7 @@ func _physics_process(delta: float) -> void:
 			
 		animated_sprite.flip_h = input_dir.x < 0
 		
-		if not footstep_sfx:
+		if not footstep_sfx.playing:
 			footstep_sfx.play()
 	else:
 		animated_sprite.play("idle")
@@ -62,10 +62,11 @@ func _input(event: InputEvent) -> void:
 func _shoot() -> void:
 	if bullet_scene == null:
 		return
-	var bullet: Area2D = bullet_scene.instantiate() as Area2D
+		
+	var bullet: Node = bullet_scene.instantiate()
 	bullet.global_position = global_position
-	bullet.direction = last_direction.normalized()
 	get_tree().current_scene.add_child(bullet)
+	bullet.set("direction", last_direction.normalized())
 	
 	
 	
