@@ -1,3 +1,42 @@
 [gd_scene format=3 uid="uid://dlw4eriyuoxku"]
 
+[ext_resource type="Texture2D" uid="uid://cavj1k7b4g2ek" path="res://Assets/hud/heart.png" id="1_e0onf"]
+
 [node name="HUD" type="CanvasLayer" unique_id=1617882117]
+
+[node name="HealthContainer" type="HBoxContainer" parent="." unique_id=353884767]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+theme_override_constants/separation = 4
+
+[node name="Heart1" type="TextureRect" parent="HealthContainer" unique_id=616034225]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("1_e0onf")
+stretch_mode = 4
+
+[node name="Heart2" type="TextureRect" parent="HealthContainer" unique_id=372567334]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("1_e0onf")
+stretch_mode = 4
+
+[node name="Heart3" type="TextureRect" parent="HealthContainer" unique_id=886733707]
+texture_filter = 1
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("1_e0onf")
+stretch_mode = 4
+
+[node name="PauseOverlay" type="ColorRect" parent="." unique_id=1446267638]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7058824)
