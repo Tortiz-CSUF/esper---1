@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c3ccgnj7pwoyp"]
 
 [ext_resource type="FontFile" uid="uid://g0knl88lrlk3" path="res://Assets/themes/ornate_pixelart_theme/pixelplay.ttf" id="1_46kw3"]
+[ext_resource type="Script" uid="uid://becxwe1fjm5wr" path="res://Scripts/introduction.gd" id="1_gko15"]
 [ext_resource type="AudioStream" uid="uid://npaw60uvdt1b" path="res://Assets/music/Esper_MENU.mp3" id="2_gko15"]
 
 [node name="Introduction" type="Control" unique_id=911553362]
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_gko15")
 
 [node name="Background" type="ColorRect" parent="." unique_id=860691824]
 layout_mode = 1
@@ -49,7 +51,7 @@ theme_override_fonts/font = ExtResource("1_46kw3")
 theme_override_font_sizes/font_size = 18
 text = "You are Esper, a young adventurer trapped in a haunted mansion. 
 Obake, your ghost companion, is here to help you. 
-Explore each room, while surviving the danges within. You must reach the boss room to escape.
+Explore each room, while surviving the dangers within. You must reach the boss room to escape.
 Clear all rooms to win!"
 horizontal_alignment = 1
 autowrap_mode = 2

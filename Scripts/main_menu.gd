@@ -107,7 +107,7 @@ func _on_quit_pressed() -> void:
 func _on_map_selected(map_size: String) -> void:
 	click_sfx.play()
 	GameManager.selected_map = map_size
-	get_tree().change_scene_to_file("[PLACEHOLDER]")	
+	get_tree().change_scene_to_file("res://Scenes/introduction.tscn")	
 	
 	
 func _on_map_back_pressed() -> void:
