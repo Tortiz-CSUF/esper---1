@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dde1op2bf3xir"]
 
 [ext_resource type="Texture2D" uid="uid://dyxee573vt6by" path="res://Assets/characters/fluffy/fluffy.png" id="1_3mxmt"]
+[ext_resource type="Script" uid="uid://dmx3bbuex3vfq" path="res://Scripts/ghost.gd" id="1_e3r4w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3r4w"]
 atlas = ExtResource("1_3mxmt")
@@ -28,6 +29,7 @@ animations = [{
 size = Vector2(18, 18)
 
 [node name="Ghost" type="CharacterBody2D" unique_id=520346448]
+script = ExtResource("1_e3r4w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=643191612]
 texture_filter = 1
