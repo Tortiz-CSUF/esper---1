@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://c3ccgnj7pwoyp"]
 
+[ext_resource type="FontFile" uid="uid://g0knl88lrlk3" path="res://Assets/themes/ornate_pixelart_theme/pixelplay.ttf" id="1_46kw3"]
+[ext_resource type="AudioStream" uid="uid://npaw60uvdt1b" path="res://Assets/music/Esper_MENU.mp3" id="2_gko15"]
+
 [node name="Introduction" type="Control" unique_id=911553362]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +10,91 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="." unique_id=860691824]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ContentContainer" type="VBoxContainer" parent="." unique_id=1080341009]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="GoalTitle" type="Label" parent="ContentContainer" unique_id=149187178]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_46kw3")
+theme_override_font_sizes/font_size = 36
+text = "~ The Goal ~"
+horizontal_alignment = 1
+
+[node name="Spacer1" type="Control" parent="ContentContainer" unique_id=2077250505]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="GoalText" type="Label" parent="ContentContainer" unique_id=819765962]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_46kw3")
+theme_override_font_sizes/font_size = 18
+text = "You are Esper, a young adventurer trapped in a haunted mansion. 
+Obake, your ghost companion, is here to help you. 
+Explore each room, while surviving the danges within. You must reach the boss room to escape.
+Clear all rooms to win!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Spacer2" type="Control" parent="ContentContainer" unique_id=1939377078]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="ControlsTitle" type="Label" parent="ContentContainer" unique_id=1816445276]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_46kw3")
+theme_override_font_sizes/font_size = 28
+text = "~ Controls ~"
+horizontal_alignment = 1
+
+[node name="Spacer3" type="Control" parent="ContentContainer" unique_id=717773495]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="ControlsText" type="Label" parent="ContentContainer" unique_id=320723145]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_46kw3")
+theme_override_font_sizes/font_size = 16
+text = "Player Movement: W A S D
+Ghost Movement: Arrow Keys
+Sprint: SHIFT + W A S D
+Shoot: SPACE
+Pause: P"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Spacer4" type="Control" parent="ContentContainer" unique_id=1468183408]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+
+[node name="ContinueLabel" type="Label" parent="ContentContainer" unique_id=547071139]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_46kw3")
+theme_override_font_sizes/font_size = 22
+text = "Press SPACE to continue"
+horizontal_alignment = 1
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." unique_id=1246178714]
+stream = ExtResource("2_gko15")
+autoplay = true
+bus = &"Music"
