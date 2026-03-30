@@ -1,3 +1,18 @@
 [gd_scene format=3 uid="uid://bsc3u14gtog0x"]
 
+[ext_resource type="PackedScene" uid="uid://v4cgn362c5l" path="res://Scenes/player.tscn" id="1_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://dde1op2bf3xir" path="res://Scenes/ghost.tscn" id="2_3dryh"]
+[ext_resource type="AudioStream" uid="uid://14ncqkwnso2v" path="res://Assets/music/Esper_MAIN.mp3" id="3_wowpa"]
+
 [node name="Game" type="Node2D" unique_id=1280561062]
+
+[node name="Player" parent="." unique_id=1889443987 instance=ExtResource("1_wrm1d")]
+position = Vector2(300, 300)
+
+[node name="Ghost" parent="." unique_id=520346448 instance=ExtResource("2_3dryh")]
+position = Vector2(340, 300)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=272089572]
+stream = ExtResource("3_wowpa")
+autoplay = true
+bus = &"Music"

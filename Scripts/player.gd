@@ -62,7 +62,7 @@ func _input(event: InputEvent) -> void:
 func _shoot() -> void:
 	if bullet_scene == null:
 		return
-	var bullet: Node = bullet_scene.instantiate()
+	var bullet: Area2D = bullet_scene.instantiate() as Area2D
 	bullet.global_position = global_position
 	bullet.direction = last_direction.normalized()
 	get_tree().current_scene.add_child(bullet)
