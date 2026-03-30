@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://v4cgn362c5l" path="res://Scenes/player.tscn" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://dde1op2bf3xir" path="res://Scenes/ghost.tscn" id="2_3dryh"]
 [ext_resource type="AudioStream" uid="uid://14ncqkwnso2v" path="res://Assets/music/Esper_MAIN.mp3" id="3_wowpa"]
+[ext_resource type="PackedScene" uid="uid://dlw4eriyuoxku" path="res://Scenes/hud.tscn" id="4_3dryh"]
 
 [node name="Game" type="Node2D" unique_id=1280561062]
 
@@ -16,3 +17,5 @@ position = Vector2(340, 300)
 stream = ExtResource("3_wowpa")
 autoplay = true
 bus = &"Music"
+
+[node name="HUD" parent="." unique_id=1617882117 instance=ExtResource("4_3dryh")]

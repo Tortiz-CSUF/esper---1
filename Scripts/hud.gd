@@ -27,7 +27,24 @@ func _ready() -> void:
 	pause_settings_button.pressed.connect(_on_pause_settings_pressed)
 	main_menu_button.pressed.connect(_on_main_menu_pressed)
 	
+	pause_music_slider.value_changed.connect(_on_music_volume_changed)
+	pause_sfx_slider.value_changed.connect(_on_sfx_volume_changed)
+	pause_settings_back_button.pressed.connect(_on_pause_settings_back_pressed)
 	
+	var music_bus_index: int = AudioServer.get_bus_index("Music")
+	var sfx_bus_index: int = AudioServer.get_bus_index("SFX")
+	pause_music_slider.value = db_to_linear(AudioServer.get_bus_volume_db(music_bus_index))
+	pause_sfx_slider.value = db_to_linear(AudioServer.get_bus_volume_db(sfx_bus_index))
+	
+	
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("pause"):
+		if is_paused:
+			_resume_game()
+		else:
+			_pause_menu()
+			
+			
 	
 func _pause_menu() -> void:
 	is_paused = true
