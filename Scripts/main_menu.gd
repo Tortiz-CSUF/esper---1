@@ -40,6 +40,7 @@ func _ready() -> void:
 	settings_button.pressed.connect(_on_settings_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
 	settings_back_button.pressed.connect(_on_settings_back_pressed)
+	map_back_button.pressed.connect(_on_map_back_pressed)
 	small_button.pressed.connect(_on_map_selected.bind("small"))
 	medium_button.pressed.connect(_on_map_selected.bind("medium"))
 	large_button.pressed.connect(_on_map_selected.bind("large"))
