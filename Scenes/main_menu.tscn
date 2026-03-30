@@ -6,9 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://npaw60uvdt1b" path="res://Assets/music/Esper_MENU.mp3" id="3_opfnp"]
 [ext_resource type="AudioStream" uid="uid://b24ylfoiod0mn" path="res://Assets/sfx/menu_click.wav" id="4_cp0ys"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
-bg_color = Color(0.50377727, 0.99999994, 0.9784524, 1)
-
 [node name="MainMenu" type="Control" unique_id=1479134135]
 layout_mode = 3
 anchors_preset = 15
@@ -203,7 +200,6 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_styles/slider = SubResource("StyleBoxFlat_n45e2")
 max_value = 1.0
 step = 0.05
 value = 1.0
@@ -223,7 +219,6 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_styles/slider = SubResource("StyleBoxFlat_n45e2")
 max_value = 1.0
 step = 0.05
 value = 1.0

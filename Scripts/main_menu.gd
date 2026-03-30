@@ -40,9 +40,14 @@ func _ready() -> void:
 	settings_button.pressed.connect(_on_settings_pressed)
 	quit_button.pressed.connect(_on_quit_pressed)
 	settings_back_button.pressed.connect(_on_settings_back_pressed)
-
+	small_button.pressed.connect(_on_map_selected.bind("small"))
+	medium_button.pressed.connect(_on_map_selected.bind("medium"))
+	large_button.pressed.connect(_on_map_selected.bind("large"))
+		
+	
 	music_slider.value_changed.connect(_on_music_volume_changed)
 	sfx_slider.value_changed.connect(_on_sfx_volume_changed)
+
 
 	var music_bus_index: int = AudioServer.get_bus_index("Music")
 	var sfx_bus_index: int = AudioServer.get_bus_index("SFX")
@@ -68,7 +73,6 @@ func _on_button_unhovered() -> void:
 func _show_panel(panel_name: String) -> void:
 	menu_container.visible = false
 	map_select_panel.visible = false
-	settings_panel.visible = false
 	settings_panel.visible = false
 	selection_indicator.visible = false
 	
