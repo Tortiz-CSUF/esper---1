@@ -66,7 +66,7 @@ func _shoot() -> void:
 	var bullet: Node = bullet_scene.instantiate()
 	bullet.global_position = global_position
 	get_tree().current_scene.add_child(bullet)
-	bullet.set("direction", last_direction.normalized())
+	bullet.call("set_direction", last_direction.normalized())
 	
 	
 	
