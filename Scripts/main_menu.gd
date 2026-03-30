@@ -41,7 +41,14 @@ func _ready() -> void:
 	quit_button.pressed.connect(_on_quit_pressed)
 	settings_back_button.pressed.connect(_on_settings_back_pressed)
 
+	music_slider.value_changed.connect(_on_music_volume_changed)
+	sfx_slider.value_changed.connect(_on_sfx_volume_changed)
 
+	var music_bus_index: int = AudioServer.get_bus_index("Music")
+	var sfx_bus_index: int = AudioServer.get_bus_index("SFX")
+	music_slider.value = db_to_linear(AudioServer.get_bus_volume_db(music_bus_index))
+	sfx_slider.value = db_to_linear(AudioServer.get_bus_volume_db(sfx_bus_index))
+	
 
 func _on_button_hovered(btn: Button) -> void:
 	selection_indicator.visible = true
