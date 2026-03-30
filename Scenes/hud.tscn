@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dlw4eriyuoxku"]
 
+[ext_resource type="Script" uid="uid://d2edj2ibedjg0" path="res://Scripts/hud.gd" id="1_bjfho"]
 [ext_resource type="Texture2D" uid="uid://cavj1k7b4g2ek" path="res://Assets/hud/heart.png" id="1_e0onf"]
+[ext_resource type="FontFile" uid="uid://g0knl88lrlk3" path="res://Assets/themes/ornate_pixelart_theme/pixelplay.ttf" id="3_6fbih"]
 
 [node name="HUD" type="CanvasLayer" unique_id=1617882117]
+script = ExtResource("1_bjfho")
 
 [node name="HealthContainer" type="HBoxContainer" parent="." unique_id=353884767]
 offset_left = 10.0
@@ -40,3 +43,125 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.7058824)
+
+[node name="PauseMenu" type="VBoxContainer" parent="PauseOverlay" unique_id=1674803804]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -35.5
+offset_right = 20.0
+offset_bottom = 35.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="PauseTitle" type="Label" parent="PauseOverlay/PauseMenu" unique_id=1854370839]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6fbih")
+theme_override_font_sizes/font_size = 40
+text = "Paused"
+horizontal_alignment = 1
+
+[node name="PauseSpacer1" type="Control" parent="PauseOverlay/PauseMenu" unique_id=813061615]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="ResumeButton" type="Button" parent="PauseOverlay/PauseMenu" unique_id=1105087969]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6fbih")
+theme_override_font_sizes/font_size = 28
+text = "Resume"
+flat = true
+
+[node name="PauseSpacer2" type="Control" parent="PauseOverlay/PauseMenu" unique_id=874274238]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="PauseSettingsButton" type="Button" parent="PauseOverlay/PauseMenu" unique_id=1326103105]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6fbih")
+theme_override_font_sizes/font_size = 28
+text = "Settings"
+flat = true
+
+[node name="PauseSpacer3" type="Control" parent="PauseOverlay/PauseMenu" unique_id=1889399173]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="MainMenuButton" type="Button" parent="PauseOverlay/PauseMenu" unique_id=1504841219]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6fbih")
+theme_override_font_sizes/font_size = 28
+text = "Main Menu"
+
+[node name="SettingsPanel" type="VBoxContainer" parent="." unique_id=424951024]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="SettingsTitle" type="Label" parent="SettingsPanel" unique_id=1391928977]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6fbih")
+theme_override_font_sizes/font_size = 40
+text = "Settings
+"
+horizontal_alignment = 1
+
+[node name="SettingsSpacer1" type="Control" parent="SettingsPanel" unique_id=1330055059]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="MusicLabel" type="Label" parent="SettingsPanel" unique_id=616757748]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6fbih")
+theme_override_font_sizes/font_size = 32
+text = "Music"
+horizontal_alignment = 1
+
+[node name="MusicSlider" type="HSlider" parent="SettingsPanel" unique_id=821124001]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SettingsSpacer2" type="Control" parent="SettingsPanel" unique_id=1978049412]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="SettingsPanel" unique_id=2086175196]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_6fbih")
+theme_override_font_sizes/font_size = 32
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="SFXSlider" type="HSlider" parent="SettingsPanel" unique_id=2105104283]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SettingsSpacer3" type="Control" parent="SettingsPanel" unique_id=915776815]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="SettingsBackButton" type="Button" parent="SettingsPanel" unique_id=1691226643]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.50377727, 0.99999994, 0.9784524, 1)
+theme_override_fonts/font = ExtResource("3_6fbih")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+flat = true
