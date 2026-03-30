@@ -13,6 +13,12 @@ var empty_heart: Texture2D = preload("res://Assets/hud/empty_heart.png")
 @onready var pause_settings_button: Button = $PauseOverlay/PauseMenu/PauseSettingsButton
 @onready var main_menu_button: Button = $PauseOverlay/PauseMenu/MainMenuButton
 
+## Pause Settings Refs
+@onready var pause_settings_panel: VBoxContainer = $SettingsPanel
+@onready var pause_music_slider: HSlider = $SettingsPanel/MusicSlider
+@onready var pause_sfx_slider: HSlider = $SettingsPanel/SFXSlider
+@onready var pause_settings_back_button: Button = $SettingsPanel/SettingsBackButton
+
 
 
 # Called when the node enters the scene tree for the first time.
