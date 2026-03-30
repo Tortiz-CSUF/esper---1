@@ -10,7 +10,7 @@ var health: int = 3
 
 # Node Refs
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var footstep_sfx: AudioStreamPlayer2D = $FootstepSFX
+@onready var footstep_sfx: AudioStreamPlayer = $FootstepSFX
 @onready var shoot_cooldown: Timer = $ShootCooldown
 
 # Bullet Scene - To be implemented

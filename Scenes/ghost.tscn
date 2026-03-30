@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dde1op2bf3xir"]
+
+[ext_resource type="Texture2D" uid="uid://dyxee573vt6by" path="res://Assets/characters/fluffy/fluffy.png" id="1_3mxmt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e3r4w"]
+atlas = ExtResource("1_3mxmt")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_108wt"]
+atlas = ExtResource("1_3mxmt")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3btnm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e3r4w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_108wt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_taxxh"]
+size = Vector2(18, 18)
+
+[node name="Ghost" type="CharacterBody2D" unique_id=520346448]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=643191612]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_3btnm")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=590682925]
+shape = SubResource("RectangleShape2D_taxxh")
