@@ -50,7 +50,7 @@ size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_46kw3")
 theme_override_font_sizes/font_size = 18
 text = "You are Esper, a young adventurer trapped in a haunted mansion. 
-Obake, your ghost companion, is here to help you. 
+Fluffy, your ghost companion, is here to help you. 
 Explore each room, while surviving the dangers within. You must reach the boss room to escape.
 Clear all rooms to win!"
 horizontal_alignment = 1
