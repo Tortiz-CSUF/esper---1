@@ -23,12 +23,9 @@ var is_paused: bool = false
 
 
 func _ready() -> void:
-	
-
-
-
-func _process(delta: float) -> void:
-	pass
+	resume_button.pressed.connect(_on_resume_pressed)
+	pause_settings_button.pressed.connect(_on_pause_settings_pressed)
+	main_menu_button.pressed.connect(_on_main_menu_pressed)
 	
 	
 	
@@ -39,11 +36,11 @@ func _pause_menu() -> void:
 	get_tree().paused = true
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	
-	
+
 func _resume_game() -> void:
 	is_paused = false
 	pause_overlay.visible = false
-	pause_settings_panel = false
+	pause_settings_panel.visible = false
 	get_tree().paused = false
 	
 
@@ -56,11 +53,12 @@ func update_health(current_health: int) -> void:
 			hearts[i].texture = empty_heart
 			
 			
+## Pause Menu Buttons			
 func _on_resume_pressed() -> void: 
 	_resume_game()
 	
 
-func _on_pause_settings() -> void:
+func _on_pause_settings_pressed() -> void:
 	pause_overlay.visible = false
 	pause_settings_panel.visible = true
 	
@@ -88,4 +86,8 @@ func _on_sfx_volume_changed(value: float) -> void:
 			AudioServer.set_bus_mute(sfx_bus_index, false)
 		else:
 			AudioServer.set_bus_mute(sfx_bus_index, true)	
-	
+
+
+func _on_pause_settings_back_pressed() -> void:
+	pause_settings_panel.visible = false
+	pause_overlay.visible = true
