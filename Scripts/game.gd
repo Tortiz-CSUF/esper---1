@@ -82,10 +82,12 @@ func _spawn_doors(room_index: int, is_boss_room: bool) -> void:
 		var door: Area2D = door_scene.instantiate()
 		door.global_position = spot.global_position
 		
-		if room_index == 0:
-			door.target_room_index = mini(i + 1, total_rooms - 1)
-		else:
-			door.target_room_index = room_index + 1
+		door.target_room_index = room_index + 1
+		
+		#if room_index == 0:
+			#door.target_room_index = mini(i + 1, total_rooms - 1)
+		#else:
+			#door.target_room_index = room_index + 1
 			
 		current_room_instance.add_child(door)
 		
