@@ -13,5 +13,5 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		var game: Node = get_tree().current_scene
 		if game.has_method("go_to_room"):
-			game.call("go_to_room", target_room_index)
+			game.call_deferred("go_to_room", target_room_index)
 		
