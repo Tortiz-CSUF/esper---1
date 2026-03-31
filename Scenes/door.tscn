@@ -7,6 +7,7 @@
 radius = 15.0
 
 [node name="Door" type="Area2D" unique_id=1133135762]
+collision_layer = 2
 script = ExtResource("1_p0e35")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=907192652]

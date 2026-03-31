@@ -100,7 +100,7 @@ region_rect = Rect2(64, 96, 16, 16)
 
 [node name="Skull4" type="Sprite2D" parent="Decorations" unique_id=322130851]
 texture_filter = 1
-position = Vector2(696, 311)
+position = Vector2(697, 311)
 texture = ExtResource("2_5e3kt")
 flip_h = true
 region_enabled = true
