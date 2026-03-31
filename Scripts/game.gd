@@ -65,7 +65,28 @@ func _spawn_doors(room_index: int, is_boss_room: bool) -> void:
 	var door_spots_node: Node2D = current_room_instance.get_node("DoorSpots")
 	var all_spots: Array[Node] = door_spots_node.get_children()
 	
+	var door_count: int = 1
+	if room_index == 0:
+		door_count = randi_range(1,3)
+		starting_door_count = door_count
+	else:
+		door_count = 1
+		
+	all_spots.shuffle()
 	
+	door_count = mini(door_count, all_spots.size())
+	
+	for i in range(door_count):
+		var spot: Marker2D = all_spots[i] as Marker2D
+		var door: Area2D = door_scene.instantiate()
+		door.global_position = spot.global_position
+		
+		if room_index == 0:
+			door.target_room_index = mini(i + 1, total_rooms - 1)
+		else:
+			door.target_room_index = room_index + 1
+			
+		current_room_instance.add_child(door)
 		
 		
 		
