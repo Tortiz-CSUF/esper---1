@@ -1,21 +1,28 @@
 [gd_scene format=3 uid="uid://bsc3u14gtog0x"]
 
+[ext_resource type="Script" uid="uid://blfgive266e2q" path="res://Scripts/game.gd" id="1_i6g32"]
 [ext_resource type="PackedScene" uid="uid://v4cgn362c5l" path="res://Scenes/player.tscn" id="1_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://dde1op2bf3xir" path="res://Scenes/ghost.tscn" id="2_3dryh"]
 [ext_resource type="AudioStream" uid="uid://14ncqkwnso2v" path="res://Assets/music/Esper_MAIN.mp3" id="3_wowpa"]
 [ext_resource type="PackedScene" uid="uid://dlw4eriyuoxku" path="res://Scenes/hud.tscn" id="4_3dryh"]
+[ext_resource type="AudioStream" uid="uid://b7pah0vduxru0" path="res://Assets/music/Esper_BOSS.mp3" id="6_1l0tm"]
 
 [node name="Game" type="Node2D" unique_id=1280561062]
+script = ExtResource("1_i6g32")
+
+[node name="RoomContainer" type="Node2D" parent="." unique_id=831585447]
 
 [node name="Player" parent="." unique_id=1889443987 instance=ExtResource("1_wrm1d")]
-position = Vector2(300, 300)
 
 [node name="Ghost" parent="." unique_id=520346448 instance=ExtResource("2_3dryh")]
-position = Vector2(340, 300)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=272089572]
+[node name="HUD" parent="." unique_id=1617882117 instance=ExtResource("4_3dryh")]
+
+[node name="GameMusic" type="AudioStreamPlayer" parent="." unique_id=272089572]
 stream = ExtResource("3_wowpa")
 autoplay = true
 bus = &"Music"
 
-[node name="HUD" parent="." unique_id=1617882117 instance=ExtResource("4_3dryh")]
+[node name="BossMusic" type="AudioStreamPlayer" parent="." unique_id=379052327]
+stream = ExtResource("6_1l0tm")
+bus = &"Music"
