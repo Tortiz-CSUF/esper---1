@@ -25,6 +25,49 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func go_to_room(room_index: int) -> void:
+	if current_room_instance != null:
+		current_room_instance.queue_free()
+		current_room_instance = null
+		
+	current_room_index = room_index
+	
+	var is_boss_room: bool = (room_index == total_rooms - 1)
+	
+	if is_boss_room:
+		current_room_instance = boss_room_scene.instantiate()
+	else:
+		current_room_instance = room_scene.instantiate()
+		
+	room_container.add_child(current_room_instance)
+	
+	_spawn_doors(room_index, is_boss_room)
+	
+	var spawn_point: Marker2D = current_room_instance.get_node("PlayerSpawn")
+	player.global_position = spawn_point.global_position
+	ghost.global_position = spawn_point.global_position + Vector2(20, 0)
+	
+	if is_boss_room:
+		game_music.stop()
+		if not boss_music.playing:
+			boss_music.play()
+	else:
+		boss_music.stop()
+		if not game_music.playing:
+			game_music.play()
+	
+	
+	
+func _spawn_doors(room_index: int, is_boss_room: bool) -> void:
+	if is_boss_room:
+		return
+		
+	var door_spots_node: Node2D = current_room_instance.get_node("DoorSpots")
+	var all_spots: Array[Node] = door_spots_node.get_children()
+	
+	
+		
+		
+		
+		
+		
